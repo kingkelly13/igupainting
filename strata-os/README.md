@@ -71,9 +71,10 @@ for cards, fully round pills. Touch targets are at least 44 px.
 The Xiaomi 15T ships with Xiaomi HyperOS, which is built on Android. There are three
 realistic routes, from easiest to hardest:
 
-### 1. A launcher app (recommended first step)
-Build Strata's home screen, Spaces, search and dock as an Android launcher
-(Kotlin + Jetpack Compose) and set it as the default Home app.
+### 1. A launcher app (recommended first step): **built, see [`launcher/`](launcher/)**
+Strata's home screen, Spaces, search, dock, Controls and Privacy screen as an Android
+launcher (Kotlin + Jetpack Compose) that you set as the default Home app.
+[`launcher/README.md`](launcher/README.md) has install steps.
 - No bootloader unlock, no warranty risk, and banking and payment apps keep working.
 - Covers Home · Spaces, search, widgets and a Strata-styled Controls panel.
 - Limits: a normal app can't replace the system lock screen, the always-on display
