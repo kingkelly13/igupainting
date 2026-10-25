@@ -1,0 +1,20 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-25T15:37:14Z"},
+  "title": "Xiaomi 15T Custom OS",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 470, "y": 0, "w": 390, "h": 844, "title": "Lock screen", "is_interactive": true, "radius": 44},
+    "AOD.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "Always-on display", "is_interactive": true, "radius": 44},
+    "Home.dc.html": {"x": 940, "y": 0, "w": 390, "h": 844, "title": "Home · Spaces", "is_interactive": true, "radius": 44},
+    "Control.dc.html": {"x": 1410, "y": 0, "w": 390, "h": 844, "title": "Controls", "is_interactive": true, "radius": 44},
+    "Privacy.dc.html": {"x": 1880, "y": 0, "w": 390, "h": 844, "title": "Privacy Center", "is_interactive": true, "radius": 44},
+    "Foundations.dc.html": {"x": 0, "y": 964, "w": 1280, "h": 900, "title": "Foundations"}
+  },
+  "order": ["Main.dc.html", "AOD.dc.html", "Home.dc.html", "Control.dc.html", "Privacy.dc.html", "Foundations.dc.html"],
+  "notes": {
+    "rowTitle": {"x": 0, "y": -300, "text": "Strata OS for Xiaomi 15T", "kind": "title1", "maxW": 2270}
+  },
+  "designSystems": []
+}

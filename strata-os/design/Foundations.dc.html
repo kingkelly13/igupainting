@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strata OS · Foundations</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E10}
+a{color:#FFB547}a:hover{color:#FFD08A}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; box-sizing: border-box; padding: 48px 64px; background: #0D0E10; color: #F3F1EC; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column">
+
+<div style="display: flex; align-items: flex-end; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 48px; line-height: 1; font-weight: 600; letter-spacing: -0.03em">Strata OS <span style="color: {{accent}}">·</span> Foundations</h1>
+<span style="font-size: 16px; color: #A9ADB4">Built for Xiaomi 15T: 6.83-inch 1.5K AMOLED, 120 Hz, in-display fingerprint, centre punch-hole camera</span>
+</div>
+<span style="height: 32px; padding: 0 14px; border-radius: 16px; border: 1px solid #2C3036; font-size: 13px; color: #A9ADB4; display: flex; align-items: center">Concept v0.1</span>
+</div>
+
+<div style="margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: #A9ADB4">COLOR</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 16px; column-gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; border: 1px solid #2C3036; background: #0D0E10; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Ink</span><span style="font-size: 12px; color: #A9ADB4">#0D0E10 · ground</span></span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; border: 1px solid #2C3036; background: #17191D; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Surface</span><span style="font-size: 12px; color: #A9ADB4">#17191D · cards</span></span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; border: 1px solid #2C3036; background: #212429; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Raised</span><span style="font-size: 12px; color: #A9ADB4">#212429 · controls</span></span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; border: 1px solid #4A4F57; background: #2C3036; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Line</span><span style="font-size: 12px; color: #A9ADB4">#2C3036 · dividers</span></span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; background: #F3F1EC; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Text</span><span style="font-size: 12px; color: #A9ADB4">#F3F1EC · primary</span></span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; background: #A9ADB4; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Muted</span><span style="font-size: 12px; color: #A9ADB4">#A9ADB4 · secondary</span></span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; background: {{accent}}; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Accent</span><span style="font-size: 12px; color: #A9ADB4">{{accent}} · state only</span></span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; border: 1px solid #2C3036; background: #000000; flex-shrink: 0"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">True black</span><span style="font-size: 12px; color: #A9ADB4">#000000 · always-on</span></span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: #A9ADB4">TYPE</span>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Space Grotesk', Inter, sans-serif; font-size: 72px; line-height: 0.9; font-weight: 500; letter-spacing: -0.05em">08<span style="color: {{accent}}">47</span></span>
+<span style="font-size: 12px; color: #A9ADB4">Clock · Space Grotesk 132 / 500</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Space Grotesk', Inter, sans-serif; font-size: 34px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em">Privacy</span>
+<span style="font-size: 12px; color: #A9ADB4">Title · Space Grotesk 34 / 600</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 600">Parcel out for delivery</span>
+<span style="font-size: 12px; color: #A9ADB4">Body strong · Inter 15 / 600</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #A9ADB4">Arrives 11:00–13:00</span>
+<span style="font-size: 12px; color: #A9ADB4">Secondary · Inter 13 / 400</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 12px">Rotation lock</span>
+<span style="font-size: 12px; color: #A9ADB4">Label · Inter 11–12 / 400</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: #A9ADB4">REACH ZONES</span>
+<div style="display: flex; gap: 20px">
+<div aria-hidden="true" style="width: 150px; height: 325px; flex-shrink: 0; box-sizing: border-box; border-radius: 26px; border: 2px solid #4A4F57; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 34%; background: #17191D; position: relative">
+<span style="position: absolute; left: 70px; top: 7px; width: 6px; height: 6px; border-radius: 3px; background: #000000"></span>
+</div>
+<div style="height: 30%; background: #1C1F24; border-top: 1px dashed #4A4F57"></div>
+<div style="flex-grow: 1; background: #17191D; border-top: 2px solid {{accent}}; position: relative">
+<span style="position: absolute; left: 59px; bottom: 26px; width: 28px; height: 28px; box-sizing: border-box; border-radius: 14px; border: 1.5px solid {{accent}}"></span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; justify-content: space-between; padding: 10px 0">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 600">Glance</span>
+<span style="font-size: 13px; line-height: 1.4; color: #A9ADB4">Read-only: time, status, live activities</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 600">Browse</span>
+<span style="font-size: 13px; line-height: 1.4; color: #A9ADB4">Widgets and the app grid</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 600; color: {{accent}}">Act</span>
+<span style="font-size: 13px; line-height: 1.4; color: #A9ADB4">Search, Controls, dock, fingerprint: every tap within thumb reach</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+
+<div style="grid-column: span 2; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: #A9ADB4">ICONS · 24 GRID · 1.75 STROKE</span>
+<div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); row-gap: 14px; column-gap: 8px">
+<sc-for list="{{iconList}}" as="ic" hint-placeholder-count="30">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span style="width: 48px; height: 48px; box-sizing: border-box; border-radius: 14px; background: #17191D; border: 1px solid #2C3036; display: flex; align-items: center; justify-content: center">
+<svg class="ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="{{ic.d}}"></path></svg>
+</span>
+<span style="font-size: 11px; line-height: 14px; color: #A9ADB4">{{ic.name}}</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: #A9ADB4">COMPONENTS</span>
+<div style="display: flex; gap: 8px">
+<button type="button" aria-pressed="true" style="flex: 1; height: 40px; border-radius: 20px; border: 1px solid {{accent}}; background: {{accent}}; color: #1A1306; font: inherit; font-size: 14px; font-weight: 600; padding: 0">Personal</button>
+<button type="button" aria-pressed="false" style="flex: 1; height: 40px; border-radius: 20px; border: 1px solid #2C3036; background: #17191D; color: #F3F1EC; font: inherit; font-size: 14px; font-weight: 600; padding: 0">Work</button>
+<button type="button" aria-pressed="false" style="flex: 1; height: 40px; border-radius: 20px; border: 1px solid #2C3036; background: #17191D; color: #F3F1EC; font: inherit; font-size: 14px; font-weight: 600; padding: 0">Out</button>
+</div>
+<div style="display: flex; align-items: center; gap: 16px">
+<button type="button" role="switch" aria-checked="true" aria-label="Switch, on" style="width: 52px; height: 32px; box-sizing: border-box; border-radius: 16px; border: 0; padding: 3px; background: {{accent}}; display: flex; justify-content: flex-end"><span style="width: 26px; height: 26px; border-radius: 13px; background: #1A1306"></span></button>
+<button type="button" role="switch" aria-checked="false" aria-label="Switch, off" style="width: 52px; height: 32px; box-sizing: border-box; border-radius: 16px; border: 0; padding: 3px; background: #2C3036; display: flex; justify-content: flex-start"><span style="width: 26px; height: 26px; border-radius: 13px; background: #A9ADB4"></span></button>
+<span style="height: 30px; padding: 0 12px; border-radius: 15px; background: #17191D; border: 1px solid #2C3036; display: flex; align-items: center; gap: 7px; font-size: 12px; color: #A9ADB4"><span style="width: 6px; height: 6px; border-radius: 3px; background: {{accent}}"></span>Auto · Work</span>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" style="flex: 1; height: 48px; border-radius: 24px; border: 0; background: {{accent}}; color: #1A1306; font: inherit; font-size: 15px; font-weight: 600">Allow once</button>
+<button type="button" style="flex: 1; height: 48px; border-radius: 24px; border: 1px solid #2C3036; background: #17191D; color: #F3F1EC; font: inherit; font-size: 15px; font-weight: 600">Not now</button>
+</div>
+<div style="height: 52px; box-sizing: border-box; border-radius: 18px; background: #212429; position: relative; overflow: hidden">
+<div style="position: absolute; left: 0; top: 0; bottom: 0; width: 64%; background: {{accent}}"></div>
+<svg class="ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="position: absolute; left: 16px; top: 15px; color: #1A1306"><path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0z M12 2v2 M12 20v2 M4.9 4.9l1.4 1.4 M17.7 17.7l1.4 1.4 M2 12h2 M20 12h2 M4.9 19.1l1.4-1.4 M17.7 6.3l1.4-1.4"></path></svg>
+</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FFB547","options":["#FFB547","#6ED3C1","#9DB4FF","#FF7A59"]},"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const icons = [
+      ['Phone', 'M6.5 3.5h3l1.5 4.5-2 1.3a11 11 0 0 0 5.7 5.7l1.3-2 4.5 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z'],
+      ['Messages', 'M4 5h16v11H10l-5 4v-4H4z'],
+      ['Camera', 'M3 8h4l2-3h6l2 3h4v11H3z M12 10a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z'],
+      ['Photos', 'M4 5h16v14H4z M4 15l4.5-4.5 4 4 3-3L20 16 M14 9a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0z'],
+      ['Mail', 'M3 6h18v12H3z M3 7l9 6 9-6'],
+      ['Calendar', 'M4 6h16v14H4z M4 10h16 M8 3v4 M16 3v4'],
+      ['Maps', 'M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z M9 4v14 M15 6v14'],
+      ['Music', 'M9 18V6l11-2v12 M3 18a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M14 16a3 3 0 1 0 6 0a3 3 0 1 0-6 0z'],
+      ['Notes', 'M6 3h9l4 4v14H6z M14 3v5h5 M9 12h7 M9 16h7'],
+      ['Files', 'M3 6h6l2 2h10v11H3z'],
+      ['Wallet', 'M4 7h16v12H4z M4 7l12-3v3 M15 12h5v3h-5z'],
+      ['Settings', 'M4 7h10 M18 7h2 M4 17h4 M12 17h8 M16 5v4 M10 15v4'],
+      ['Browser', 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M3 12h18 M12 3c3.5 3.5 3.5 14.5 0 18 M12 3c-3.5 3.5-3.5 14.5 0 18'],
+      ['Meet', 'M3 7h12v10H3z M15 11l6-3v8l-6-3'],
+      ['Chat', 'M4 4h16v12h-7l-5 4v-4H4z M8 9h8 M8 12h5'],
+      ['Tasks', 'M4 5h16v14H4z M8 12l3 3 5-6'],
+      ['Transit', 'M5 4h14v12H5z M5 11h14 M8 16v3 M16 16v3'],
+      ['Weather', 'M7 18h10a4 4 0 0 0 0-8a6 6 0 0 0-11.5 1.5A3.3 3.3 0 0 0 7 18z'],
+      ['Clock', 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M12 7v5l3 2'],
+      ['Health', 'M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z'],
+      ['Parcels', 'M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10'],
+      ['Scan', 'M4 8V4h4 M16 4h4v4 M20 16v4h-4 M8 20H4v-4 M4 12h16'],
+      ['Wi-Fi', 'M2.5 9a14 14 0 0 1 19 0 M5.5 12.5a9.5 9.5 0 0 1 13 0 M8.5 16a5 5 0 0 1 7 0 M12 19.5v.01'],
+      ['Bluetooth', 'M7 7l10 10-5 4V3l5 4L7 17'],
+      ['Location', 'M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z M9.5 9a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0z'],
+      ['Focus', 'M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z'],
+      ['Torch', 'M8 3h8v4l-2 3v11h-4V10L8 7z M12 13v2'],
+      ['Privacy', 'M12 3l8 3v6c0 5-3.5 8-8 9c-4.5-1-8-4-8-9V6z M9 12l2 2 4-4'],
+      ['Lock', 'M6 11h12v9H6z M8 11V8a4 4 0 0 1 8 0v3'],
+      ['Search', 'M4 11a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M20 20l-4-4']
+    ].map(([name, d]) => ({ name, d }));
+    return { accent: this.props.accent ?? '#FFB547', iconList: icons };
+  }
+}
+</script>
+</body>
+</html>

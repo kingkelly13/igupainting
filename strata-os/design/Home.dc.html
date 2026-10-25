@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strata OS · Home with Spaces</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E10}
+a{color:#FFB547}a:hover{color:#FFD08A}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; background: #0D0E10; color: #F3F1EC; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column">
+
+<svg viewBox="0 0 390 844" width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0">
+<path d="M0 470 C 80 445 150 500 230 480 S 350 440 390 455 V 844 H 0 Z" fill="#111316"></path>
+<path d="M0 560 C 70 540 160 590 250 565 S 360 530 390 545 V 844 H 0 Z" fill="#15181C"></path>
+<path d="M0 640 C 90 615 170 668 265 642 S 365 612 390 624 V 844 H 0 Z" fill="#1A1D22"></path>
+<path d="M0 728 C 100 708 180 752 280 730 S 370 706 390 714 V 844 H 0 Z" fill="#1F2328"></path>
+<path d="M0 796 C 110 780 190 815 290 798 S 372 782 390 788 V 844 H 0 Z" fill="#252A30"></path>
+</svg>
+
+<div style="position: relative; height: 44px; flex-shrink: 0; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 600">
+<span>08:47</span>
+<div aria-hidden="true" style="position: absolute; left: 189px; top: 16px; width: 12px; height: 12px; border-radius: 6px; background: #000000; box-shadow: 0 0 0 1px #22252A"></div>
+<div style="display: flex; align-items: center; gap: 8px">
+<svg viewBox="0 0 18 12" width="18" height="12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1" fill="#F3F1EC"></rect><rect x="5" y="5" width="3" height="7" rx="1" fill="#F3F1EC"></rect><rect x="10" y="2.5" width="3" height="9.5" rx="1" fill="#F3F1EC"></rect><rect x="15" y="0" width="3" height="12" rx="1" fill="#4A4F57"></rect></svg>
+<svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="{{icons.wifi}}"></path></svg>
+<span>82</span>
+<svg viewBox="0 0 27 13" width="27" height="13" aria-hidden="true"><rect x="0.5" y="0.5" width="23" height="12" rx="3.5" fill="none" stroke="#8A8F98"></rect><rect x="2.5" y="2.5" width="16" height="8" rx="2" fill="#F3F1EC"></rect><rect x="25" y="4.5" width="2" height="4" rx="1" fill="#8A8F98"></rect></svg>
+</div>
+</div>
+
+<div style="position: relative; display: flex; gap: 8px; padding: 8px 20px 0">
+<sc-for list="{{spaces}}" as="s" hint-placeholder-count="3">
+<button type="button" aria-pressed="{{s.pressed}}" onClick="{{s.pick}}" style="flex: 1; height: 40px; border-radius: 20px; border: 1px solid {{s.border}}; background: {{s.bg}}; color: {{s.fg}}; font: inherit; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0; cursor: pointer">
+<svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="{{s.d}}"></path></svg>
+<span>{{s.label}}</span>
+</button>
+</sc-for>
+</div>
+<div style="position: relative; padding: 9px 22px 0; display: flex; align-items: center; gap: 7px; font-size: 12px; color: #A9ADB4">
+<span style="width: 6px; height: 6px; border-radius: 3px; background: {{accent}}"></span>
+<span>Auto · {{caption}}</span>
+</div>
+
+<div style="position: relative; margin: 16px 16px 0; background: #17191D; border: 1px solid #2C3036; border-radius: 26px; padding: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-size: 13px; color: #A9ADB4">{{kicker}}</span>
+<span style="font-family: 'Space Grotesk', Inter, sans-serif; font-size: 46px; line-height: 1; font-weight: 500; letter-spacing: -0.03em; margin: 8px 0 8px">{{big}}</span>
+<span style="font-size: 13px; line-height: 1.35; color: #A9ADB4">{{sub}}</span>
+</div>
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 14px; border-left: 1px solid #2C3036; padding-left: 16px; min-width: 0">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="2">
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #212429; display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+<svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="{{it.d}}"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.25">{{it.title}}</span>
+<span style="font-size: 12px; color: #A9ADB4">{{it.meta}}</span>
+</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="position: relative; margin-top: 22px; padding: 0 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 18px; column-gap: 8px">
+<sc-for list="{{apps}}" as="app" hint-placeholder-count="12">
+<sc-if value="{{app.isLink}}" hint-placeholder-val="{{false}}">
+<a href="Privacy.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; color: #F3F1EC">
+<span style="width: 56px; height: 56px; box-sizing: border-box; border-radius: 18px; background: #17191D; border: 1px solid #2C3036; display: flex; align-items: center; justify-content: center">
+<svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="{{app.d}}"></path></svg>
+</span>
+<span style="font-size: 12px; line-height: 16px">{{app.name}}</span>
+</a>
+</sc-if>
+<sc-if value="{{app.isApp}}" hint-placeholder-val="{{true}}">
+<button type="button" style="background: none; border: 0; padding: 0; font: inherit; color: #F3F1EC; display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer">
+<span style="width: 56px; height: 56px; box-sizing: border-box; border-radius: 18px; background: #17191D; border: 1px solid #2C3036; display: flex; align-items: center; justify-content: center">
+<svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="{{app.d}}"></path></svg>
+</span>
+<span style="font-size: 12px; line-height: 16px">{{app.name}}</span>
+</button>
+</sc-if>
+</sc-for>
+</div>
+
+<div style="flex-grow: 1"></div>
+
+<div aria-hidden="true" style="position: relative; display: flex; justify-content: center; gap: 6px; margin-bottom: 14px">
+<span style="width: 16px; height: 6px; border-radius: 3px; background: #F3F1EC"></span>
+<span style="width: 6px; height: 6px; border-radius: 3px; background: #4A4F57"></span>
+<span style="width: 6px; height: 6px; border-radius: 3px; background: #4A4F57"></span>
+</div>
+
+<div style="position: relative; display: flex; gap: 10px; padding: 0 16px">
+<button type="button" style="flex-grow: 1; height: 52px; border-radius: 26px; border: 1px solid #2C3036; background: #17191D; color: #A9ADB4; font: inherit; font-size: 14px; display: flex; align-items: center; gap: 10px; padding: 0 16px; cursor: pointer">
+<svg class="ic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="color: #F3F1EC"><path d="{{icons.search}}"></path></svg>
+<span style="flex-grow: 1; text-align: left">Search apps, files, settings</span>
+<svg class="ic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="color: #F3F1EC"><path d="{{icons.mic}}"></path></svg>
+</button>
+<a href="Control.dc.html" aria-label="Open Controls" style="width: 52px; height: 52px; flex-shrink: 0; box-sizing: border-box; border-radius: 26px; border: 1px solid {{accent}}; background: #17191D; color: {{accent}}; display: flex; align-items: center; justify-content: center; text-decoration: none">
+<svg class="ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="{{icons.toggles}}"></path></svg>
+</a>
+</div>
+
+<div style="position: relative; margin: 14px 16px 0; height: 72px; box-sizing: border-box; border-radius: 28px; background: #17191D; border: 1px solid #2C3036; display: flex; align-items: center; justify-content: space-around">
+<sc-for list="{{dock}}" as="d" hint-placeholder-count="4">
+<button type="button" aria-label="{{d.name}}" style="width: 56px; height: 56px; border-radius: 18px; border: 0; background: #212429; color: #F3F1EC; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer">
+<svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="{{d.d}}"></path></svg>
+</button>
+</sc-for>
+</div>
+
+<div aria-hidden="true" style="position: relative; height: 26px; flex-shrink: 0; display: flex; align-items: center; justify-content: center">
+<span style="width: 124px; height: 4px; border-radius: 2px; background: #F3F1EC"></span>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FFB547","options":["#FFB547","#6ED3C1","#9DB4FF","#FF7A59"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  icons() {
+    return {
+      phone: 'M6.5 3.5h3l1.5 4.5-2 1.3a11 11 0 0 0 5.7 5.7l1.3-2 4.5 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z',
+      message: 'M4 5h16v11H10l-5 4v-4H4z',
+      camera: 'M3 8h4l2-3h6l2 3h4v11H3z M12 10a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z',
+      photos: 'M4 5h16v14H4z M4 15l4.5-4.5 4 4 3-3L20 16 M14 9a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0z',
+      mail: 'M3 6h18v12H3z M3 7l9 6 9-6',
+      calendar: 'M4 6h16v14H4z M4 10h16 M8 3v4 M16 3v4',
+      maps: 'M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z M9 4v14 M15 6v14',
+      music: 'M9 18V6l11-2v12 M3 18a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M14 16a3 3 0 1 0 6 0a3 3 0 1 0-6 0z',
+      notes: 'M6 3h9l4 4v14H6z M14 3v5h5 M9 12h7 M9 16h7',
+      files: 'M3 6h6l2 2h10v11H3z',
+      wallet: 'M4 7h16v12H4z M4 7l12-3v3 M15 12h5v3h-5z',
+      settings: 'M4 7h10 M18 7h2 M4 17h4 M12 17h8 M16 5v4 M10 15v4',
+      globe: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M3 12h18 M12 3c3.5 3.5 3.5 14.5 0 18 M12 3c-3.5 3.5-3.5 14.5 0 18',
+      video: 'M3 7h12v10H3z M15 11l6-3v8l-6-3',
+      chat: 'M4 4h16v12h-7l-5 4v-4H4z M8 9h8 M8 12h5',
+      tasks: 'M4 5h16v14H4z M8 12l3 3 5-6',
+      bus: 'M5 4h14v12H5z M5 11h14 M8 16v3 M16 16v3',
+      weather: 'M7 18h10a4 4 0 0 0 0-8a6 6 0 0 0-11.5 1.5A3.3 3.3 0 0 0 7 18z',
+      clock: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M12 7v5l3 2',
+      heart: 'M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z',
+      parcel: 'M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10',
+      scan: 'M4 8V4h4 M16 4h4v4 M20 16v4h-4 M8 20H4v-4 M4 12h16',
+      calc: 'M6 3h12v18H6z M9 7h6 M9 12h.01 M12 12h.01 M15 12h.01 M9 16h.01 M12 16h.01 M15 16h.01',
+      translate: 'M4 5h9 M8.5 3v2 M6 5c1 4 3.5 7 6.5 8.5 M11 5c-1 4-3.5 7-6.5 8.5 M13 21l4-9 4 9 M14.5 18h5',
+      moon: 'M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z',
+      home: 'M4 11l8-7 8 7v9H4z M10 20v-5h4v5',
+      briefcase: 'M3 8h18v11H3z M8 8V5h8v3 M3 13h18',
+      compass: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M15.5 8.5l-2 5-5 2 2-5z',
+      search: 'M4 11a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M20 20l-4-4',
+      mic: 'M9 6a3 3 0 0 1 6 0v6a3 3 0 0 1-6 0z M5 11a7 7 0 0 0 14 0 M12 18v3',
+      wifi: 'M2.5 9a14 14 0 0 1 19 0 M5.5 12.5a9.5 9.5 0 0 1 13 0 M8.5 16a5 5 0 0 1 7 0 M12 19.5v.01',
+      toggles: 'M7 4h10a4 4 0 0 1 0 8H7a4 4 0 0 1 0-8z M14 8a2 2 0 1 0 4 0a2 2 0 1 0-4 0z M7 14h10a4 4 0 0 1 0 8H7a4 4 0 0 1 0-8z M6 18a2 2 0 1 0 4 0a2 2 0 1 0-4 0z'
+    };
+  }
+
+  spaceData() {
+    return {
+      personal: {
+        caption: 'evenings and weekends',
+        kicker: 'Today',
+        big: '18°',
+        sub: 'Partly cloudy, rain from 15:00',
+        items: [['calendar', 'Lunch with Alex', '13:00'], ['heart', 'Evening run', '18:30']],
+        apps: [['Photos', 'photos'], ['Mail', 'mail'], ['Calendar', 'calendar'], ['Maps', 'maps'], ['Music', 'music'], ['Notes', 'notes'], ['Wallet', 'wallet'], ['Weather', 'weather'], ['Health', 'heart'], ['Files', 'files'], ['Clock', 'clock'], ['Settings', 'settings']]
+      },
+      work: {
+        caption: 'weekdays 9:00–18:00 at the office',
+        kicker: 'Next meeting',
+        big: '10:00',
+        sub: 'Standup, Room 3, in 1 h 13 min',
+        items: [['tasks', '4 tasks due', 'Today'], ['moon', 'Focus block', '13:00–15:00']],
+        apps: [['Mail', 'mail'], ['Calendar', 'calendar'], ['Docs', 'notes'], ['Meet', 'video'], ['Chat', 'chat'], ['Tasks', 'tasks'], ['Files', 'files'], ['Scan', 'scan'], ['Calculator', 'calc'], ['Maps', 'maps'], ['Clock', 'clock'], ['Settings', 'settings']]
+      },
+      out: {
+        caption: 'when you leave a saved place',
+        kicker: 'Bus 42 to Centre',
+        big: '6 min',
+        sub: 'Stop B, 180 m away',
+        items: [['wallet', 'Transit card', 'Ready'], ['maps', 'Offline maps', 'City centre']],
+        apps: [['Maps', 'maps'], ['Transit', 'bus'], ['Wallet', 'wallet'], ['Weather', 'weather'], ['Music', 'music'], ['Photos', 'photos'], ['Scan', 'scan'], ['Health', 'heart'], ['Parcels', 'parcel'], ['Translate', 'translate'], ['Clock', 'clock'], ['Settings', 'settings']]
+      }
+    };
+  }
+
+  renderVals() {
+    const accent = this.props.accent ?? '#FFB547';
+    const I = this.icons();
+    const cur = (this.state && this.state.space) || 'personal';
+    const S = this.spaceData()[cur];
+    const spaces = [['personal', 'Personal', 'home'], ['work', 'Work', 'briefcase'], ['out', 'Out', 'compass']].map(([id, label, icon]) => {
+      const on = id === cur;
+      return {
+        label,
+        d: I[icon],
+        pressed: on,
+        bg: on ? accent : '#17191D',
+        fg: on ? '#1A1306' : '#F3F1EC',
+        border: on ? accent : '#2C3036',
+        pick: () => this.setState({ space: id })
+      };
+    });
+    const items = S.items.map(([icon, title, meta]) => ({ d: I[icon], title, meta }));
+    const apps = S.apps.map(([name, icon]) => ({ name, d: I[icon], isLink: name === 'Settings', isApp: name !== 'Settings' }));
+    const dock = [['Phone', 'phone'], ['Messages', 'message'], ['Camera', 'camera'], ['Browser', 'globe']].map(([name, icon]) => ({ name, d: I[icon] }));
+    return { accent, icons: I, spaces, caption: S.caption, kicker: S.kicker, big: S.big, sub: S.sub, items, apps, dock };
+  }
+}
+</script>
+</body>
+</html>
