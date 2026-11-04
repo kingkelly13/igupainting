@@ -16,9 +16,12 @@ HyperOS's home screen without unlocking the bootloader, and you can switch back 
 - **Controls.** Tiles for Wi-Fi, mobile data, Bluetooth and Focus (Do Not Disturb);
   quick toggles for torch, vibrate, rotation lock, auto-brightness, location, airplane
   mode, battery saver and cast; brightness and media-volume sliders.
-- **All apps and search.** Swipe up, or tap the search bar. Results also include
-  settings pages and a web search. Hold any app to add it to a Space, see app info or
-  uninstall it.
+- **All apps and search.** Swipe up, or tap the search bar. Search ranks apps whose name
+  starts with what you typed first, then apps where it starts a later word ("maps" finds
+  Google Maps, "tube" finds YouTube), then apps that just contain it. Case and accents don't
+  matter. The matching follows AOSP Launcher3's rules (see
+  [`docs/app-search-trace.md`](docs/app-search-trace.md)). Results also include settings
+  pages and a web search. Hold any app to add it to a Space, see app info or uninstall it.
 - **Privacy.** Lists which of your apps can use the camera, microphone and location,
   with a link to each app's permissions.
 - **Look.** A graphite theme, the strata wallpaper, and a choice of four accent colours.
@@ -65,9 +68,13 @@ To build it yourself you need JDK 17 and the Android SDK (platform 35):
 
 ```sh
 cd strata-os/launcher
+./gradlew testDebugUnitTest   # unit tests
 ./gradlew assembleRelease
 # app/build/outputs/apk/release/app-release.apk
 ```
+
+`tools/launcher3-diff` compares the drawer search with AOSP Launcher3's matcher. It needs a
+Launcher3 checkout, and its README explains how to run it.
 
 Every build is signed with `app/strata.keystore`, so a new build installs over the
 old one. That key is committed to the repo on purpose and only fits a personal,

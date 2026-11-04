@@ -54,6 +54,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.strataos.launcher.LauncherModel
 import com.strataos.launcher.Overlay
+import com.strataos.launcher.data.AppSearch
 import kotlinx.coroutines.delay
 
 /** A settings page the search can jump to. A null action means Strata's own settings. */
@@ -90,13 +91,9 @@ fun AppDrawer(model: LauncherModel, focusSearch: Boolean) {
     val focusRequester = remember { FocusRequester() }
     val trimmed = query.trim()
     val apps = model.apps
+    val search = remember { AppSearch() }
     val results = remember(trimmed, apps) {
-        if (trimmed.isEmpty()) {
-            apps
-        } else {
-            apps.filter { it.label.contains(trimmed, ignoreCase = true) }
-                .sortedBy { !it.label.startsWith(trimmed, ignoreCase = true) }
-        }
+        if (trimmed.isEmpty()) apps else search.filter(trimmed, apps) { it.label }
     }
     val shortcuts = remember(trimmed) {
         if (trimmed.isEmpty()) emptyList() else Shortcuts.filter { it.matches(trimmed) }
