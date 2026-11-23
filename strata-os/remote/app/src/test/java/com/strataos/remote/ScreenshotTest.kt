@@ -18,7 +18,10 @@ import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 import java.io.File
 
-/** Renders the main screens to build/screenshots so layouts can be checked without a phone. */
+/**
+ * Walks through setup and every remote layout, saving each screen to app/build/screenshots so
+ * layouts can be checked without a phone. It also fails if any screen crashes while composing.
+ */
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(sdk = [34], qualifiers = "w393dp-h852dp-xhdpi")

@@ -57,7 +57,7 @@ The app needs no permissions you have to grant. IR transmit is allowed at instal
 ## Building
 
 GitHub Actions builds the app on every push that touches `strata-os/remote/`
-(see `.github/workflows/strata-remote.yml`). It runs the encoder unit tests, uploads the APK as
+(see `.github/workflows/strata-remote.yml`). It runs the unit and screen tests, uploads the APK as
 a workflow artifact and replaces the `strata-remote-latest` pre-release.
 
 To build it yourself you need JDK 17 and the Android SDK (platform 35):
@@ -70,7 +70,9 @@ cd strata-os/remote
 
 The unit tests in `app/src/test` check each encoder against the codes as code lists print them
 (LG power is `0x20DF10EF`, Samsung power `0xE0E040BF`, and so on), and that every built-in code
-fits in Android's two-second transmit limit.
+fits in Android's two-second transmit limit. `ScreenshotTest` walks through setup and every
+remote layout under Robolectric and saves each screen to `app/build/screenshots/`, so layout
+changes can be checked without a phone.
 
 Every build is signed with `app/strata-remote.keystore`, so a new build installs over the old
 one. That key is committed on purpose and only fits a personal, sideloaded app. Don't use it to
