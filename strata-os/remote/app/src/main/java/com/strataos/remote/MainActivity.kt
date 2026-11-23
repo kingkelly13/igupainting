@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun RemoteApp(model: RemoteModel) {
+internal fun RemoteApp(model: RemoteModel) {
     StrataTheme(accent = Amber) {
         BackHandler(enabled = model.screen != Screen.Home) { model.back() }
         val export = rememberIrExporter()

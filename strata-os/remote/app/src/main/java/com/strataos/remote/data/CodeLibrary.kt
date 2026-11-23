@@ -24,8 +24,8 @@ class CodeSet(
     /** A second button to confirm with, for when the device was already off. */
     val confirmButton: RemoteButton?
         get() = buttons.firstOrNull { it.key == "vol_up" }
-            ?: buttons.firstOrNull { it.key == "power_off" }
             ?: buttons.firstOrNull { it.key == "led_r" }
+            ?: buttons.firstOrNull { it.key == "power_off" }
 }
 
 private class SetBuilder(private val protocol: Protocol, private val address: Long) {

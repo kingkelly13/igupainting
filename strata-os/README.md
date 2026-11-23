@@ -100,3 +100,12 @@ A real OS replacement: an AOSP or LineageOS-based build with a modified SystemUI
 
 **Suggested path:** start with route 1. Live with the Strata launcher for a while and
 improve the design, then decide whether a full ROM is worth it.
+
+---
+
+## Strata Remote: **built, see [`remote/`](remote/)**
+
+A universal remote that uses the 15T's IR blaster, in the same graphite-and-amber style. It has
+built-in codes for the main TV brands, Roku and LED lights, finds the right code by testing
+them with you, and imports Flipper Zero `.ir` files for everything else.
+[`remote/README.md`](remote/README.md) has install steps.

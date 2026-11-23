@@ -277,7 +277,7 @@ private fun ColumnScope.TestStep(model: RemoteModel, pickFile: () -> Unit) {
         }
         if (confirm != null) {
             Text(
-                "Already off? Send ${confirm.label} instead",
+                "Or test with ${confirm.label}",
                 color = StrataColors.Muted,
                 fontSize = 14.sp,
                 modifier = Modifier

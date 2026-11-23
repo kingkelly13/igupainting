@@ -33,6 +33,14 @@ jobs:
       - name: Test the IR encoders
         run: ./gradlew --no-daemon --stacktrace testDebugUnitTest
 
+      # Temporary: prints the rendered screens so they can be reviewed from the log.
+      - name: Print screenshots
+        if: always()
+        run: |
+          for f in app/build/screenshots/*.png; do
+            echo "SHOT $(basename "$f") $(base64 -w0 "$f")"
+          done
+
       - name: Build the APK
         run: ./gradlew --no-daemon --stacktrace assembleRelease
 
