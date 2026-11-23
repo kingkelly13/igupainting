@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Strata Remote mark: a graphite remote with the amber beam leaving its tip. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FF2C3036"
+        android:pathData="M46,44 h16 a6,6 0 0 1 6,6 v26 a6,6 0 0 1 -6,6 h-16 a6,6 0 0 1 -6,-6 v-26 a6,6 0 0 1 6,-6 z" />
+    <path
+        android:fillColor="#FF4A4F57"
+        android:pathData="M54,52 m-4.5,0 a4.5,4.5 0 1 0 9,0 a4.5,4.5 0 1 0 -9,0 z" />
+    <path
+        android:fillColor="#FF4A4F57"
+        android:pathData="M47,64 h5 v4 h-5 z M56,64 h5 v4 h-5 z M47,71 h5 v4 h-5 z M56,71 h5 v4 h-5 z" />
+    <path
+        android:pathData="M44,36 C49,31 59,31 64,36 M39,30 C48,22 60,22 69,30"
+        android:strokeWidth="3.5"
+        android:strokeColor="#FFFFB547"
+        android:strokeLineCap="round" />
+</vector>

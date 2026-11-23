@@ -1,0 +1,57 @@
+name: Strata Remote
+
+on:
+  push:
+    paths:
+      - "strata-os/remote/**"
+      - ".github/workflows/strata-remote.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: strata-remote-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: strata-os/remote
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Test the IR encoders
+        run: ./gradlew --no-daemon --stacktrace testDebugUnitTest
+
+      - name: Build the APK
+        run: ./gradlew --no-daemon --stacktrace assembleRelease
+
+      - name: Name the APK
+        run: cp app/build/outputs/apk/release/app-release.apk strata-remote.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: strata-remote
+          path: strata-os/remote/strata-remote.apk
+
+      # A rolling pre-release so the newest APK is one tap away on the phone.
+      - name: Publish the latest build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete strata-remote-latest --yes --cleanup-tag || true
+          gh release create strata-remote-latest strata-remote.apk \
+            --target "$GITHUB_SHA" \
+            --prerelease \
+            --title "Strata Remote (latest build)" \
+            --notes "Built from ${GITHUB_SHA::7} on ${GITHUB_REF_NAME}. Download strata-remote.apk on your phone and open it to install."
